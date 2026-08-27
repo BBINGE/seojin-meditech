@@ -47,11 +47,42 @@ document.querySelectorAll('.quote-link').forEach((link) => {
 });
 
 const kakaoChatUrl = 'https://pf.kakao.com/_xojxkbxj/chat';
+const privacyConsentVersion = '2026.08.27';
+
+function getKoreanTimestamp() {
+  return new Intl.DateTimeFormat('ko-KR', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: false
+  }).format(new Date()) + ' KST';
+}
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (_) {}
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  let copied = false;
+  try { copied = document.execCommand('copy'); } catch (_) {}
+  textarea.remove();
+  return copied;
+}
 
 document.querySelectorAll('.lead-form').forEach((form) => {
   const message = form.querySelector('.form-message');
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     message.classList.remove('error');
 
@@ -76,12 +107,19 @@ document.querySelectorAll('.lead-form').forEach((form) => {
       data.get('region') ? `희망 지역: ${data.get('region')}` : '',
       `진료과목: ${data.get('department')}`,
       `연락처: ${data.get('phone')}`,
+      `개인정보 수집·이용 동의: 동의함 (방침 v${privacyConsentVersion})`,
+      `동의 일시: ${getKoreanTimestamp()}`,
       '방문 가능 일정과 제품 자료를 안내해주세요.'
     ].filter(Boolean).join('\n');
 
-    navigator.clipboard?.writeText(body).catch(() => {});
+    const copied = await copyText(body);
+    if (!copied) {
+      showMessage(message, '상담 내용을 자동으로 복사하지 못했습니다. 카카오톡 상담 버튼으로 이동해 병원명과 연락처를 직접 보내주세요.', true);
+      return;
+    }
+
     showMessage(message, '상담 내용이 복사되었습니다. 카카오톡 상담창에서 붙여넣어 전송해주세요.');
-    window.setTimeout(() => { window.location.href = kakaoChatUrl; }, 350);
+    window.setTimeout(() => { window.location.href = kakaoChatUrl; }, 650);
   });
 });
 

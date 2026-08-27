@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="서진메디텍 신장분사치료기 원내 방문 데모 및 의료기기 도입 상담. CO₂ 가스 충전 없는 전기 공기 냉각 방식을 병원에서 직접 확인하세요.">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="서진메디텍 신장분사치료기 원내 방문 데모 및 의료기기 도입 상담. 전기 공기 냉각 방식의 제품 사양과 도입 조건을 병원에서 직접 확인하세요.">
   <meta name="theme-color" content="#071a30">
   <title>신장분사치료기 방문 데모 | 서진메디텍</title>
   <link rel="icon" href="assets/logo-mark.png" type="image/png">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="styles-v2.css?v=20260827-16">
+  <link rel="stylesheet" href="styles-v2.css?v=20260827-19">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,12 +44,18 @@
     <a class="top-cta attention-cta quote-link" href="#quote">무료 방문 데모 <span>→</span></a>
   </header>
 
+  <div class="audience-notice" role="note">
+    <strong>의료인·의료기관 개설자 및 관계자 대상</strong>
+    <span>본 페이지는 의료기기 도입 상담용 정보이며 환자 대상 진료·치료 상담이 아닙니다.</span>
+    <a href="advertising-disclosure.html">제품·광고정보 고지</a>
+  </div>
+
   <aside class="quick-rail" aria-label="빠른 상담">
     <p>QUICK CONTACT</p>
     <a class="quick-demo attention-cta quote-link" href="#quote"><span class="quick-icon">↗</span><strong>무료 데모<br>신청하기</strong><small>30초 간편 신청</small></a>
     <div class="quick-actions">
       <a href="tel:028417525"><span class="quick-action-icon" aria-hidden="true">☎</span><span class="quick-action-copy"><b>전화 상담 받기</b></span><i aria-hidden="true">›</i></a>
-      <a class="kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener"><img src="assets/kakaotalk-symbol.png" alt=""><span class="quick-action-copy"><b>카톡 상담하기</b><small>빠른 1:1 상담</small></span><i aria-hidden="true">›</i></a>
+      <a class="kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener noreferrer"><img src="assets/kakaotalk-symbol.png" alt=""><span class="quick-action-copy"><b>카톡 상담하기</b><small>빠른 1:1 상담</small></span><i aria-hidden="true">›</i></a>
     </div>
     <a class="rail-top" href="#top"><span>↑</span><b>맨 위로</b></a>
   </aside>
@@ -59,8 +65,8 @@
       <div class="hero-inner">
         <div class="hero-copy reveal">
           <p class="eyebrow">전기 공기 냉각 방식 · 원내 방문 데모</p>
-          <h1>CO₂ 가스 충전비 없이,<br><em>냉각치료 운영과 비급여 상담을 한 번에.</em></h1>
-          <p class="hero-sub">가스 용기 충전·보관의 번거로움 없이 사용하는 전기 공기 냉각 방식. 원장님 병원에서 장비 성능과 도입 조건을 직접 확인하세요.</p>
+          <h1>별도 가스 충전 없이,<br><em>냉각 장비 운영과 도입 상담을 한 번에.</em></h1>
+          <p class="hero-sub">전기 공기 냉각 방식의 제품 사양과 가스 용기 충전·보관 여부를 원장님 병원에서 직접 확인하세요. 구체적인 성능과 사용 목적은 제품별 허가사항을 기준으로 안내합니다.</p>
           <div class="hero-actions">
             <a class="button button-primary attention-cta quote-link" href="#quote">무료 방문 데모 신청 <span>→</span></a>
             <a class="button button-ghost" href="tel:028417525">지금 전화 상담 <strong>02-841-7525</strong></a>
@@ -72,9 +78,9 @@
           </div>
         </div>
 
-        <form class="quote-card lead-form reveal" id="quote" novalidate>
+        <form class="quote-card lead-form reveal" id="quote" novalidate onsubmit="return false">
           <div class="quote-head">
-            <p>100% 무료 원내 방문 데모</p>
+            <p>무료 원내 방문 데모</p>
             <span>30초 간편 신청</span>
           </div>
           <h2>원내 방문 데모 &amp;<br>도입 상담 신청</h2>
@@ -85,9 +91,17 @@
             <label><span>진료과목</span><select name="department" required><option value="">선택해주세요</option><option>정형외과</option><option>마취통증의학과</option><option>재활의학과</option><option>신경외과</option><option>한의원</option><option>기타</option></select></label>
             <label><span>연락처</span><input name="phone" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></label>
           </div>
-          <label class="consent"><input type="checkbox" name="consent" required><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html" target="_blank" rel="noopener">내용 보기</a></span></label>
+          <div class="consent-panel" id="hero-consent-detail">
+            <dl>
+              <dt>수집·이용 목적</dt><dd>방문 데모, 제품·견적 상담, 일정 및 담당자 안내</dd>
+              <dt>수집 항목</dt><dd>병원명, 담당자 성명, 진료과목, 연락처</dd>
+              <dt>보유 기간</dt><dd>상담 종료일 또는 마지막 연락일 중 늦은 날부터 6개월</dd>
+            </dl>
+            <p class="consent-refusal">동의를 거부할 수 있으나, 필수 정보이므로 거부 시 방문 데모·상담 신청이 제한됩니다.</p>
+            <label class="consent"><input type="checkbox" name="consent" required aria-describedby="hero-consent-detail"><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html#collection-consent" target="_blank" rel="noopener noreferrer">전체 내용 보기</a></span></label>
+          </div>
           <button class="attention-cta" type="submit">무료 방문 데모 및 자료 신청하기 <span>→</span></button>
-          <p class="form-note">신청 내용을 복사한 뒤 서진메디텍 카카오톡 1:1 상담으로 연결합니다.</p>
+          <p class="form-note">입력 내용은 사이트 서버에 저장·자동 전송되지 않습니다. 신청 버튼을 누르면 기기 클립보드에 복사되고 카카오톡으로 이동하며, 상담창에서 직접 전송할 때 서진메디텍이 수신합니다.</p>
           <div class="form-message" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -119,7 +133,7 @@
             <article><strong>광주·전남·전북</strong><small>방문 일정 확인 후 담당자 연결</small></article>
           </div>
         </div>
-        <form class="network-card network-form lead-form reveal" id="regional-quote" novalidate>
+        <form class="network-card network-form lead-form reveal" id="regional-quote" novalidate onsubmit="return false">
           <span class="card-badge">내 지역 담당자 확인</span>
           <h3>가까운 일정으로<br>방문 데모를 신청하세요.</h3>
           <p>신청 후 담당 매니저가 방문 가능 일정을 안내해드립니다.</p>
@@ -130,9 +144,17 @@
             <label><span>진료과목</span><select name="department" required><option value="">진료과목 선택</option><option>정형외과</option><option>마취통증의학과</option><option>재활의학과</option><option>신경외과</option><option>한의원</option><option>기타</option></select></label>
             <label class="network-phone"><span>연락처</span><input name="phone" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></label>
           </div>
-          <label class="consent"><input type="checkbox" name="consent" required><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html" target="_blank" rel="noopener">내용 보기</a></span></label>
+          <div class="consent-panel" id="region-consent-detail">
+            <dl>
+              <dt>수집·이용 목적</dt><dd>방문 데모, 제품·견적 상담, 지역별 일정 및 담당자 안내</dd>
+              <dt>수집 항목</dt><dd>병원명, 담당자 성명, 희망 지역, 진료과목, 연락처</dd>
+              <dt>보유 기간</dt><dd>상담 종료일 또는 마지막 연락일 중 늦은 날부터 6개월</dd>
+            </dl>
+            <p class="consent-refusal">동의를 거부할 수 있으나, 필수 정보이므로 거부 시 방문 데모·상담 신청이 제한됩니다.</p>
+            <label class="consent"><input type="checkbox" name="consent" required aria-describedby="region-consent-detail"><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html#collection-consent" target="_blank" rel="noopener noreferrer">전체 내용 보기</a></span></label>
+          </div>
           <button class="attention-cta" type="submit"><img src="assets/kakaotalk-channel-official.png" alt="카카오톡 채널 톡상담"><strong>무료 데모 신청하기</strong><span>→</span></button>
-          <p class="form-note">상담 내용 복사 후 서진메디텍 공식 카카오톡 채널로 연결됩니다.</p>
+          <p class="form-note">입력 내용은 사이트 서버에 저장·자동 전송되지 않습니다. 신청 버튼을 누르면 기기 클립보드에 복사되고 카카오톡으로 이동합니다.</p>
           <div class="form-message" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -149,7 +171,7 @@
       </div>
       <div class="pain-grid">
         <article class="reveal red"><b>PAIN POINT 01</b><h3>“매달 발생하는 CO₂ 가스 충전비와 교체 번거로움”</h3><p>가스 구매·충전과 용기 보관, 교체 중 사용 중단까지 운영 부담이 반복됩니다.</p><a class="quote-link" href="#quote">운영비 구조 확인 →</a></article>
-        <article class="reveal amber"><b>PAIN POINT 02</b><h3>“안전하면서도 설명 가능한 비급여 항목이 필요할 때”</h3><p>환자 안내와 병원 운영을 함께 고려하려면 허가사항과 실제 적용 기준을 먼저 확인해야 합니다.</p><a class="quote-link" href="#quote">비급여 적용 상담 →</a></article>
+        <article class="reveal amber"><b>PAIN POINT 02</b><h3>“허가사항과 적용 기준을 명확히 설명해야 할 때”</h3><p>환자 안내와 병원 운영을 함께 고려하려면 제품 허가사항과 실제 비급여 적용 기준을 먼저 확인해야 합니다.</p><a class="quote-link" href="#quote">비급여 적용 상담 →</a></article>
         <article class="reveal blue"><b>PAIN POINT 03</b><h3>“치료 대기시간과 스태프 업무 부담을 줄이고 싶을 때”</h3><p>장비 조작과 세팅 시간을 확인하고 기존 진료 동선에 맞는지 직접 테스트해보세요.</p><a class="quote-link" href="#quote">원내 시연 신청 →</a></article>
       </div>
     </section>
@@ -164,10 +186,10 @@
           <p class="section-kicker">WHY ELECTRIC AIR COOLING</p>
           <h2>원장님 병원에 필요한<br><em>4가지 운영 이점</em></h2>
           <ul>
-            <li><span>01</span><div><strong>CO₂ 가스 충전비 0원</strong><p>전기 공기 냉각 방식으로 가스 구매·충전·보관이 필요하지 않습니다.</p></div></li>
+            <li><span>01</span><div><strong>별도 가스 충전 없는 방식</strong><p>제품별 공식 사양을 기준으로 가스 구매·충전·보관 필요 여부를 확인합니다.</p></div></li>
             <li><span>02</span><div><strong>비급여 적용 기준 상담</strong><p>제품 허가사항과 의료기관별 청구 기준을 바탕으로 적용 가능 여부를 안내합니다.</p></div></li>
-            <li><span>03</span><div><strong>-35℃ 냉각 · 다양한 노즐 구성</strong><p>사용 부위와 목적에 맞춘 장비 구성과 공식 제품 사양을 확인할 수 있습니다.</p></div></li>
-            <li><span>04</span><div><strong>3~9분 프로그램 확인</strong><p>프로그램별 사용 시간과 원내 진료 동선 적합성을 직접 시연해드립니다.</p></div></li>
+            <li><span>03</span><div><strong>냉각 성능 · 노즐 구성 확인</strong><p>사용 부위와 목적에 맞춘 장비 구성과 제품별 공식 사양을 확인합니다.</p></div></li>
+            <li><span>04</span><div><strong>프로그램별 사용 시간 확인</strong><p>허가된 사용 방법과 원내 진료 동선 적합성을 방문 시연에서 확인합니다.</p></div></li>
           </ul>
         </div>
         <div class="benefit-banner reveal">
@@ -187,20 +209,20 @@
       </div>
       <div class="product-stage">
         <div class="product-visual reveal">
-          <span>신장분사치료기</span>
-          <img src="assets/concept-cryo-device-v1.png" alt="신장분사치료기 제품 콘셉트 이미지">
+          <span>제품 콘셉트 이미지</span>
+          <img src="assets/concept-cryo-device-v1.png" alt="실제 판매 제품이 아닌 신장분사치료기 콘셉트 이미지">
           <div class="product-orbit" aria-hidden="true"></div>
         </div>
         <div class="product-copy reveal">
           <p class="section-kicker">ELECTRIC AIR COOLING SYSTEM</p>
           <h2>가스통 없이 사용하는<br><em>신장분사치료기</em></h2>
-          <p class="product-lead">전원을 켜고 필요한 부위에 냉각 공기를 전달하는 방식. 원내 시연에서 실제 조작감과 진료 동선 적합성을 직접 확인할 수 있습니다.</p>
+          <p class="product-lead">전원을 이용해 냉각 공기를 전달하는 방식의 장비입니다. 실제 판매 모델, 조작 방법과 진료 동선 적합성은 원내 시연 및 공식 제품 자료에서 확인할 수 있습니다.</p>
           <div class="product-points">
-            <article><b>01</b><div><strong>-35℃ 냉각 성능</strong><p>설정 환경과 제품 사양에 따른 냉각 공기 전달</p></div></article>
-            <article><b>02</b><div><strong>다양한 노즐 구성</strong><p>국소 부위부터 넓은 부위까지 목적별 구성 상담</p></div></article>
-            <article><b>03</b><div><strong>7인치 터치 인터페이스</strong><p>프로그램 설정과 사용 상태를 직관적으로 확인</p></div></article>
+            <article><b>01</b><div><strong>제품별 냉각 성능</strong><p>공식 사양과 허가사항을 기준으로 냉각 공기 전달 조건 확인</p></div></article>
+            <article><b>02</b><div><strong>제품별 노즐 구성</strong><p>허가된 사용 목적과 제공 구성을 공식 제품 자료로 확인</p></div></article>
+            <article><b>03</b><div><strong>조작 인터페이스</strong><p>실제 판매 모델의 프로그램 설정과 사용 방법을 시연에서 확인</p></div></article>
           </div>
-          <a class="button button-primary attention-cta kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener">제품 자료 카톡으로 받기 <span>→</span></a>
+          <a class="button button-primary attention-cta kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener noreferrer">제품 자료 카톡으로 받기 <span>→</span></a>
         </div>
       </div>
     </section>
@@ -218,7 +240,7 @@
         <table>
           <thead><tr><th>비교 항목</th><th>CO₂ / 액화질소 가스 방식</th><th>전기 공기 냉각 방식<br><small>가스 충전 없는 냉각 시스템</small></th></tr></thead>
           <tbody>
-            <tr><th>소모품·운영비</th><td>가스 구매 및 충전 비용 발생</td><td>✓ CO₂ 가스 충전비 0원</td></tr>
+            <tr><th>소모품·운영비</th><td>가스 구매 및 충전 비용 발생</td><td>✓ 별도 가스 충전이 필요 없는 방식</td></tr>
             <tr><th>보관·관리</th><td>고압 용기 보관과 잔량 확인 필요</td><td>✓ 별도 가스 용기 보관 불필요</td></tr>
             <tr><th>냉각 공급</th><td>가스 잔량에 따른 사용 조건 확인</td><td>✓ 전원을 이용한 연속 공기 냉각</td></tr>
             <tr><th>운영 편의</th><td>가스 교체·충전 일정 관리 필요</td><td>✓ 전원 연결 후 프로그램별 사용</td></tr>
@@ -238,8 +260,8 @@
         <p class="section-kicker reveal">OPERATING ECONOMICS</p>
         <h2 class="reveal">가스 충전비가 없어,<br><em>비급여 운영비 구조를 더 단순하게 검토할 수 있습니다.</em></h2>
         <div class="profit-cards">
-          <article class="reveal"><span>PROGRAM TIME</span><strong>3~9분</strong><p>프로그램별 사용 시간 확인</p></article>
-          <article class="reveal"><span>GAS REFILL</span><strong>0원</strong><p>CO₂ 가스 구매·충전 비용 없음</p></article>
+          <article class="reveal"><span>PROGRAM TIME</span><strong>제품별 확인</strong><p>허가된 프로그램과 사용 시간 안내</p></article>
+          <article class="reveal"><span>GAS REFILL</span><strong>충전 불필요</strong><p>전기 공기 냉각 제품의 운영 방식 안내</p></article>
           <article class="reveal"><span>ROI REVIEW</span><strong>개별 상담</strong><p>도입 조건과 예상 운영 건수로 검토</p></article>
         </div>
         <div class="profit-note reveal"><strong>수가 적용 상담</strong><p>진료과목과 제품 허가사항, 의료기관별 청구 기준을 확인해 도입 전 필요한 자료와 안내 범위를 상담해드립니다.</p><a class="quote-link" href="#quote">내 병원 기준으로 상담 →</a></div>
@@ -258,7 +280,7 @@
           <small>빠른 상담</small>
           <h3>원하시는 방법으로<br>바로 연결하세요.</h3>
           <a class="phone-button attention-cta" href="tel:028417525"><span class="contact-icon" aria-hidden="true">☎</span><span class="contact-copy"><strong>전화 상담 받기</strong></span><i aria-hidden="true">→</i></a>
-          <a class="kakao-button kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener"><img src="assets/kakaotalk-symbol.png" alt=""><span class="contact-copy"><strong>카카오톡으로 상담하기</strong></span><i aria-hidden="true">→</i></a>
+          <a class="kakao-button kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener noreferrer"><img src="assets/kakaotalk-symbol.png" alt=""><span class="contact-copy"><strong>카카오톡으로 상담하기</strong></span><i aria-hidden="true">→</i></a>
           <a class="text-link quote-link" href="#quote">온라인 신청서 작성하기 →</a>
         </div>
       </div>
@@ -280,8 +302,8 @@
         <span><b>전화</b> <a href="tel:028417525">02-841-7525</a></span>
         <span><b>이메일</b> <a href="mailto:zeuswave@naver.com">zeuswave@naver.com</a></span>
       </div>
-      <div class="footer-links"><a href="terms.html">이용약관</a><a href="privacy.html"><strong>개인정보처리방침</strong></a></div>
-      <p class="legal-note">본 페이지의 제품 정보는 상담을 위한 요약이며, 의료적 효과를 보장하지 않습니다. 제품 사용 목적과 사양은 의료기기 허가사항 및 공식 제품 자료를 기준으로 확인해주세요.</p>
+      <div class="footer-links"><a href="terms.html">이용약관</a><a href="privacy.html"><strong>개인정보처리방침</strong></a><a href="advertising-disclosure.html">제품·광고정보 고지</a><a href="https://www.ftc.go.kr/www/selectBizCommList.do?key=254" target="_blank" rel="noopener noreferrer">사업자정보 확인</a></div>
+      <p class="legal-note">본 페이지는 의료인·의료기관 개설자 및 관계자를 위한 도입 상담 자료입니다. 환자 대상 진료·치료 상담이 아니며 의료적 효과, 비급여 적용 또는 수익을 보장하지 않습니다. 제품명·사용 목적·성능·사양·주의사항은 실제 공급 제품의 의료기기 허가사항, 사용설명서 및 공식 제품 자료를 기준으로 확인해야 합니다. 표시된 제품 이미지는 콘셉트 이미지로 실제 판매 제품과 다를 수 있습니다.</p>
       <p class="copyright">© 2026 SEOJIN MEDITECH. All rights reserved.</p>
     </div>
   </footer>
@@ -291,6 +313,6 @@
     <a class="mobile-quote attention-cta quote-link" href="#quote"><span>30초 간편 신청</span><b>무료 데모 신청하기 →</b></a>
   </nav>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260827-17"></script>
 </body>
 </html>
