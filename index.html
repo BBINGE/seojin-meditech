@@ -36,6 +36,7 @@
     </a>
     <nav aria-label="주요 메뉴">
       <a href="#benefit">도입 포인트</a>
+      <a href="#product">제품 설명</a>
       <a href="#compare">방식 비교</a>
       <a href="#profit">운영 구조</a>
     </nav>
@@ -48,7 +49,7 @@
     <a class="quick-demo attention-cta quote-link" href="#quote"><span class="quick-icon">↗</span><strong>무료 데모</strong><small>30초 신청</small></a>
     <div class="quick-actions">
       <a href="tel:028417525"><span>☎</span><b>전화</b></a>
-      <a href="mailto:zeuswave@naver.com"><span>✉</span><b>메일</b></a>
+      <a class="kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener"><span>💬</span><b>카톡</b></a>
     </div>
     <a class="rail-top" href="#top"><span>↑</span><b>맨 위로</b></a>
   </aside>
@@ -71,7 +72,7 @@
           </div>
         </div>
 
-        <form class="quote-card reveal" id="quote" novalidate>
+        <form class="quote-card lead-form reveal" id="quote" novalidate>
           <div class="quote-head">
             <p>100% 무료 원내 방문 데모</p>
             <span>30초 간편 신청</span>
@@ -86,7 +87,7 @@
           </div>
           <label class="consent"><input type="checkbox" name="consent" required><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html" target="_blank" rel="noopener">내용 보기</a></span></label>
           <button class="attention-cta" type="submit">무료 방문 데모 및 자료 신청하기 <span>→</span></button>
-          <p class="form-note">신청 시 입력 내용이 담긴 이메일 작성 창이 열립니다. 비용 결제 없이 상담만 접수됩니다.</p>
+          <p class="form-note">신청 내용을 복사한 뒤 서진메디텍 카카오톡 1:1 상담으로 연결합니다.</p>
           <div class="form-message" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -107,23 +108,28 @@
             <span class="active">전체</span><span>서울·수도권</span><span>충청·대전</span><span>영남</span><span>호남</span>
           </div>
           <div class="region-list">
-            <article><strong>서울·수도권</strong><small>본사 상담 · 방문 일정 확인</small></article>
-            <article><strong>충청·대전</strong><small>지역 담당 매니저 연결</small></article>
-            <article><strong>영남·부산·대구</strong><small>지역 담당 매니저 연결</small></article>
-            <article><strong>호남·광주·전남</strong><small>지역 담당 매니저 연결</small></article>
+            <article><strong>서울·수도권</strong><small>당일 일정 확인 · 방문 시연 상담</small><span>방문 시연 가능</span></article>
+            <article><strong>충청·대전·세종</strong><small>지역 담당 매니저 1:1 연결</small><span>수가 상담</span></article>
+            <article><strong>영남·부산·대구</strong><small>전담 엔지니어 일정 확인</small><span>제품 교육</span></article>
+            <article><strong>호남·광주·전남</strong><small>지역별 방문 가능 일정 안내</small><span>A/S 대응</span></article>
           </div>
         </div>
-        <div class="network-card reveal">
+        <form class="network-card network-form lead-form reveal" id="regional-quote" novalidate>
           <span class="card-badge">내 지역 담당자 확인</span>
           <h3>가까운 일정으로<br>방문 데모를 신청하세요.</h3>
-          <p>병원명·지역·진료과목을 알려주시면 담당자가 직접 연락드립니다.</p>
-          <dl>
-            <div><dt>상담 대표번호</dt><dd><a href="tel:028417525">02-841-7525</a></dd></div>
-            <div><dt>상담 이메일</dt><dd><a href="mailto:zeuswave@naver.com">zeuswave@naver.com</a></dd></div>
-            <div><dt>서울 본사</dt><dd>금천구 가산동 345-29<br>대륭테크노타운19차 6층 608호</dd></div>
-          </dl>
-          <a class="button button-primary attention-cta quote-link" href="#quote">내 지역 무료 데모 신청 <span>→</span></a>
-        </div>
+          <p>신청 후 담당 매니저가 방문 가능 일정을 안내해드립니다.</p>
+          <div class="network-form-grid">
+            <label><span>병원명</span><input name="clinic" autocomplete="organization" placeholder="OO정형외과의원" required></label>
+            <label><span>원장님 성함</span><input name="director" autocomplete="name" placeholder="홍길동 원장" required></label>
+            <label><span>희망 지역</span><select name="region" required><option value="">지역 선택</option><option>서울·수도권</option><option>충청·대전·세종</option><option>영남·부산·대구</option><option>호남·광주·전남</option><option>기타 지역</option></select></label>
+            <label><span>진료과목</span><select name="department" required><option value="">진료과목 선택</option><option>정형외과</option><option>마취통증의학과</option><option>재활의학과</option><option>신경외과</option><option>한의원</option><option>기타</option></select></label>
+            <label class="network-phone"><span>연락처</span><input name="phone" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></label>
+          </div>
+          <label class="consent"><input type="checkbox" name="consent" required><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html" target="_blank" rel="noopener">내용 보기</a></span></label>
+          <button class="attention-cta" type="submit">카카오톡으로 무료 데모 신청 <span>→</span></button>
+          <p class="form-note">상담 내용 복사 후 서진메디텍 공식 카카오톡 채널로 연결됩니다.</p>
+          <div class="form-message" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </section>
 
@@ -167,6 +173,32 @@
           <a class="button button-white attention-cta quote-link" href="#quote">무료 원내 테스트 신청 <span>→</span></a>
         </div>
       </div>
+    </section>
+
+    <section class="product section" id="product">
+      <div class="section-topline reveal">
+        <p>제품 설명</p>
+        <span>병원 현장에서 확인하는 전기 공기 냉각 솔루션</span>
+      </div>
+      <div class="product-stage">
+        <div class="product-visual reveal">
+          <span>BTL CRYOTHERAPY</span>
+          <img src="assets/concept-cryo-device-v1.png" alt="신장분사치료기 제품 콘셉트 이미지">
+          <div class="product-orbit" aria-hidden="true"></div>
+        </div>
+        <div class="product-copy reveal">
+          <p class="section-kicker">ELECTRIC AIR COOLING SYSTEM</p>
+          <h2>가스통 없이 사용하는<br><em>신장분사치료기</em></h2>
+          <p class="product-lead">전원을 켜고 필요한 부위에 냉각 공기를 전달하는 방식. 원내 시연에서 실제 조작감과 진료 동선 적합성을 직접 확인할 수 있습니다.</p>
+          <div class="product-points">
+            <article><b>01</b><div><strong>-35℃ 냉각 성능</strong><p>설정 환경과 제품 사양에 따른 냉각 공기 전달</p></div></article>
+            <article><b>02</b><div><strong>다양한 노즐 구성</strong><p>국소 부위부터 넓은 부위까지 목적별 구성 상담</p></div></article>
+            <article><b>03</b><div><strong>7인치 터치 인터페이스</strong><p>프로그램 설정과 사용 상태를 직관적으로 확인</p></div></article>
+          </div>
+          <a class="button button-primary attention-cta kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener">제품 자료 카톡으로 받기 <span>→</span></a>
+        </div>
+      </div>
+      <p class="product-disclaimer">제품 이미지와 구성은 공급 모델 및 선택 옵션에 따라 달라질 수 있으며, 세부 사양은 공식 제품 자료를 기준으로 안내합니다.</p>
     </section>
 
     <section class="compare section" id="compare">
@@ -222,7 +254,7 @@
           <small>빠른 상담</small>
           <h3>무료 데모 신청하기</h3>
           <a class="phone-button attention-cta" href="tel:028417525">02-841-7525 <span>→</span></a>
-          <a class="mail-button" href="mailto:zeuswave@naver.com">zeuswave@naver.com</a>
+          <a class="kakao-button kakao-link" href="https://pf.kakao.com/_xojxkbxj/chat" target="_blank" rel="noopener">카카오톡 1:1 상담하기</a>
           <a class="text-link quote-link" href="#quote">온라인 신청서 작성 →</a>
         </div>
       </div>

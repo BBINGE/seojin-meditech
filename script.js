@@ -19,7 +19,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.pain-grid, .profit-cards, .region-list, .benefit-copy ul').forEach((group) => {
+document.querySelectorAll('.pain-grid, .profit-cards, .region-list, .benefit-copy ul, .product-points').forEach((group) => {
   [...group.children].forEach((element, index) => {
     element.classList.add('reveal-item');
     element.style.setProperty('--reveal-delay', `${index * 90}ms`);
@@ -31,7 +31,7 @@ document.querySelectorAll('.reveal, .reveal-item').forEach((element) => {
   else revealObserver.observe(element);
 });
 
-document.querySelectorAll('.pain-grid article, .profit-cards article, .network-card, .benefit-banner').forEach((card) => {
+document.querySelectorAll('.pain-grid article, .profit-cards article, .network-card, .benefit-banner, .product-visual').forEach((card) => {
   card.classList.add('interactive-card');
   card.addEventListener('pointermove', (event) => {
     const bounds = card.getBoundingClientRect();
@@ -46,44 +46,46 @@ document.querySelectorAll('.quote-link').forEach((link) => {
   });
 });
 
-const quoteForm = document.querySelector('#quote');
-const message = quoteForm.querySelector('.form-message');
+const kakaoChatUrl = 'https://pf.kakao.com/_xojxkbxj/chat';
 
-quoteForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  message.classList.remove('error');
+document.querySelectorAll('.lead-form').forEach((form) => {
+  const message = form.querySelector('.form-message');
 
-  if (!quoteForm.checkValidity()) {
-    quoteForm.reportValidity();
-    showMessage('병원명, 원장님 성함, 진료과목, 연락처와 개인정보 동의를 확인해주세요.', true);
-    return;
-  }
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    message.classList.remove('error');
 
-  const data = new FormData(quoteForm);
-  const digits = String(data.get('phone') ?? '').replace(/\D/g, '');
-  if (digits.length < 9 || digits.length > 11) {
-    showMessage('연락 가능한 전화번호를 확인해주세요.', true);
-    quoteForm.elements.phone.focus();
-    return;
-  }
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      showMessage(message, '병원명, 원장님 성함, 진료과목, 연락처와 개인정보 동의를 확인해주세요.', true);
+      return;
+    }
 
-  const subject = `[방문 데모 신청] ${data.get('clinic')} / ${data.get('director')}`;
-  const body = [
-    '서진메디텍 BTL CRYOTHERAPY 방문 데모를 신청합니다.',
-    '',
-    `병원명: ${data.get('clinic')}`,
-    `원장님 성함: ${data.get('director')}`,
-    `진료과목: ${data.get('department')}`,
-    `연락처: ${data.get('phone')}`,
-    '',
-    '방문 가능 일정과 제품 자료를 안내해주세요.'
-  ].join('\n');
+    const data = new FormData(form);
+    const digits = String(data.get('phone') ?? '').replace(/\D/g, '');
+    if (digits.length < 9 || digits.length > 11) {
+      showMessage(message, '연락 가능한 전화번호를 확인해주세요.', true);
+      form.elements.phone.focus();
+      return;
+    }
 
-  showMessage('신청 내용이 작성된 이메일 창을 여는 중입니다. 이메일 앱이 열리지 않으면 02-841-7525로 연락해주세요.');
-  window.location.href = `mailto:zeuswave@naver.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const body = [
+      '[서진메디텍 방문 데모 신청]',
+      `병원명: ${data.get('clinic')}`,
+      `원장님 성함: ${data.get('director')}`,
+      data.get('region') ? `희망 지역: ${data.get('region')}` : '',
+      `진료과목: ${data.get('department')}`,
+      `연락처: ${data.get('phone')}`,
+      '방문 가능 일정과 제품 자료를 안내해주세요.'
+    ].filter(Boolean).join('\n');
+
+    navigator.clipboard?.writeText(body).catch(() => {});
+    showMessage(message, '상담 내용이 복사되었습니다. 카카오톡 상담창에서 붙여넣어 전송해주세요.');
+    window.setTimeout(() => { window.location.href = kakaoChatUrl; }, 350);
+  });
 });
 
-function showMessage(text, isError = false) {
+function showMessage(message, text, isError = false) {
   message.textContent = text;
   message.classList.toggle('error', isError);
   message.style.display = 'block';
