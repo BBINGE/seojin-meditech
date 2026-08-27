@@ -9,7 +9,7 @@
   <title>신장분사치료기 방문 데모 | 서진메디텍</title>
   <link rel="icon" href="assets/logo-mark.png" type="image/png">
   <link rel="preload" href="assets/hero-installation-v1.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles-v2.css?v=20260827-21">
+  <link rel="stylesheet" href="styles-v2.css?v=20260828-01">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -132,6 +132,50 @@
             <article><strong>부산·울산·경남</strong><small>방문 일정 확인 후 담당자 연결</small></article>
             <article><strong>대전·세종·충남·충북</strong><small>방문 일정 확인 후 담당자 연결</small></article>
             <article><strong>광주·전남·전북</strong><small>방문 일정 확인 후 담당자 연결</small></article>
+          </div>
+          <div class="service-map reveal">
+            <div class="service-map-copy">
+              <span>SEOUL DISTRIBUTION HUB</span>
+              <h3>서울에서 전국으로<br>이어지는 방문 네트워크</h3>
+              <p>수도권 허브에서 각 권역 담당자에게 빠르게 연결합니다.</p>
+              <div class="map-stats" aria-label="전국 방문 네트워크 요약">
+                <span><b>5</b>개 권역</span>
+                <span><b>1:1</b> 담당 연결</span>
+              </div>
+            </div>
+            <div class="map-stage" role="img" aria-label="서울 허브에서 충청, 대구·경북, 부산·울산·경남, 광주·전남·전북으로 연결되는 방문 시연 네트워크 지도">
+              <img class="map-outline" src="assets/south-korea-map-outline.png" alt="" aria-hidden="true">
+              <svg class="map-routes" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="route-glow" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#9fe9ff"/>
+                    <stop offset="1" stop-color="#19bdf2"/>
+                  </linearGradient>
+                  <filter id="route-blur" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="1.1" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <marker id="route-arrow" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+                    <path d="M0 0 8 4 0 8Z" fill="#76dcff"/>
+                  </marker>
+                </defs>
+                <g class="route-lines">
+                  <path class="route-base" d="M46 22 Q48 35 53 47"/>
+                  <path class="route-base" d="M46 22 Q58 35 64 56"/>
+                  <path class="route-base" d="M46 22 Q67 43 68 72"/>
+                  <path class="route-base" d="M46 22 Q38 45 45 67"/>
+                  <path class="route-flow route-one" d="M46 22 Q48 35 53 47" marker-end="url(#route-arrow)"/>
+                  <path class="route-flow route-two" d="M46 22 Q58 35 64 56" marker-end="url(#route-arrow)"/>
+                  <path class="route-flow route-three" d="M46 22 Q67 43 68 72" marker-end="url(#route-arrow)"/>
+                  <path class="route-flow route-four" d="M46 22 Q38 45 45 67" marker-end="url(#route-arrow)"/>
+                </g>
+              </svg>
+              <span class="map-node map-hub" style="--x:46%;--y:22%;--delay:0s"><span class="node-icon"><img src="assets/logo-mark.png" alt=""></span><b>서울 허브</b></span>
+              <span class="map-node" style="--x:53%;--y:47%;--delay:.2s"><span class="node-icon">✚</span><b>충청</b></span>
+              <span class="map-node" style="--x:64%;--y:56%;--delay:.55s"><span class="node-icon">✚</span><b>대구·경북</b></span>
+              <span class="map-node" style="--x:68%;--y:72%;--delay:.8s"><span class="node-icon">✚</span><b>부울경</b></span>
+              <span class="map-node" style="--x:45%;--y:67%;--delay:.4s"><span class="node-icon">✚</span><b>호남</b></span>
+            </div>
           </div>
         </div>
         <form class="network-card network-form lead-form reveal" id="regional-quote" novalidate onsubmit="return false">
