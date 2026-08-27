@@ -73,7 +73,7 @@ button, input, select { font: inherit; }
   z-index: 90;
   right: 24px;
   top: 50%;
-  width: 178px;
+  width: 206px;
   padding: 14px;
   transform: translateY(-50%);
   background: rgba(255,255,255,.88);
@@ -118,15 +118,22 @@ button, input, select { font: inherit; }
   color: #526578;
   transition: color .2s, background .2s, transform .2s;
 }
+.quick-actions a {
+  display: grid;
+  grid-template-columns: 30px minmax(0,1fr) 12px;
+  justify-content: stretch;
+  gap: 10px;
+  padding: 0 12px;
+}
 .quick-actions a:hover, .rail-top:hover { background: var(--navy); color: #fff; transform: translateY(-3px); }
 .quick-actions .kakao-link { border-color: #fee500; background: #fee500; color: #171717; }
 .quick-actions .kakao-link:hover { background: #f4dc00; color: #171717; }
-.quick-action-icon { width: 28px; flex: 0 0 28px; font-size: 19px; text-align: center; }
-.quick-actions img { width: 30px; height: 30px; flex: 0 0 30px; border-radius: 10px; }
+.quick-action-icon { width: 30px; font-size: 19px; text-align: center; }
+.quick-actions img { width: 30px; height: 30px; border-radius: 10px; }
 .quick-action-copy { min-width: 0; display: flex; flex: 1; flex-direction: column; gap: 3px; }
-.quick-action-copy b { color: inherit; font-size: 13px; line-height: 1.2; white-space: nowrap; }
+.quick-action-copy b { color: inherit; font-size: 13px; line-height: 1.2; white-space: normal; }
 .quick-action-copy small { color: inherit; font-size: 10px; opacity: .72; white-space: nowrap; }
-.quick-actions i { font-size: 20px; font-style: normal; }
+.quick-actions i { justify-self: end; font-size: 18px; font-style: normal; }
 .rail-top { min-height: 49px; flex-direction: row; font-size: 14px; }
 .rail-top b { font-size: 12px; }
 
