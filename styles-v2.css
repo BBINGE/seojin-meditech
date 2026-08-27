@@ -365,17 +365,18 @@ main > section[id] { scroll-margin-top: 68px; }
 .benefit-copy strong { font-size: 17px; }
 .benefit-copy li p { margin: 5px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
 .benefit-banner { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: center; min-height: 560px; overflow: hidden; padding: 48px; border: 1px solid rgba(124,206,239,.2); background: #071c32; color: #fff; box-shadow: 0 24px 58px rgba(5,31,55,.22); }
-.benefit-banner::before { content: ""; position: absolute; z-index: -2; inset: 0; background: url("assets/gangnam-orthopedic-clinic-v1.webp") center / cover no-repeat; opacity: .54; filter: saturate(.82); transform: scale(1.035); transition: transform 1s cubic-bezier(.2,.75,.25,1), filter .6s ease; }
-.benefit-banner::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(144deg,transparent 0 46%,rgba(9,83,126,.42) 46% 64%,transparent 64%),linear-gradient(28deg,rgba(2,15,34,.48) 0 30%,transparent 30% 68%,rgba(3,29,58,.62) 68% 100%),linear-gradient(108deg,rgba(2,14,32,.96) 0%,rgba(3,30,57,.9) 54%,rgba(4,48,80,.76) 100%); }
+.benefit-banner::before { content: ""; position: absolute; z-index: -2; inset: 0; background: url("assets/gangnam-orthopedic-clinic-v2.webp") 38% center / cover no-repeat; opacity: .62; filter: saturate(.72) contrast(1.03); transform: scale(1.035); transition: transform 1s cubic-bezier(.2,.75,.25,1), filter .6s ease; }
+.benefit-banner::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(144deg,transparent 0 43%,rgba(8,91,138,.52) 43% 65%,transparent 65%),linear-gradient(29deg,rgba(2,14,32,.58) 0 31%,transparent 31% 65%,rgba(2,25,53,.72) 65% 100%),linear-gradient(108deg,rgba(2,13,30,.97) 0%,rgba(3,27,54,.93) 54%,rgba(3,44,76,.82) 100%); }
 .benefit-banner:hover::before { transform: scale(1.07); filter: saturate(1.08); }
 .benefit-banner > * { position: relative; z-index: 1; }
-.benefit-banner > span { align-self: flex-start; padding: 8px 11px; border: 1px solid rgba(132,218,255,.3); background: rgba(16,108,154,.38); font-size: 13px; font-weight: 900; letter-spacing: .08em; backdrop-filter: blur(8px); }
+.benefit-banner > span { align-self: flex-start; padding: 0 0 8px; border-bottom: 2px solid #5bd7ff; color: #80e2ff; font-size: 14px; font-weight: 900; letter-spacing: .12em; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
 .benefit-banner h3 { margin: 23px 0 15px; font-size: clamp(27px,2.5vw,38px); line-height: 1.4; letter-spacing: -.045em; }
-.benefit-banner > p { margin: 0; color: #dcecf6; font-size: 14px; line-height: 1.75; text-shadow: 0 2px 12px rgba(0,0,0,.2); }
-.benefit-banner > div { margin: 50px 0 22px; padding: 16px; border-left: 3px solid #35bdea; background: rgba(3,24,44,.56); box-shadow: 0 12px 30px rgba(0,0,0,.12); backdrop-filter: blur(9px); }
+.benefit-banner > p { margin: 0; color: #f0f8fc; font-size: 17px; font-weight: 650; line-height: 1.7; text-shadow: 0 2px 14px rgba(0,0,0,.42); }
+.benefit-banner > div { width: 100%; min-height: 76px; display: flex; flex-direction: column; justify-content: center; margin: 42px 0 14px; padding: 16px 18px; border-left: 3px solid #5bd7ff; background: rgba(2,20,39,.78); box-shadow: 0 12px 30px rgba(0,0,0,.18); backdrop-filter: blur(10px); }
 .benefit-banner strong, .benefit-banner small { display: block; }
 .benefit-banner small { margin-top: 5px; color: #c7eafb; }
-.benefit-banner .button { align-self: flex-start; }
+.benefit-banner .button { align-self: stretch; width: 100%; min-height: 70px; justify-content: space-between; padding: 0 20px; border: 1px solid rgba(91,215,255,.22); border-left: 3px solid #ffe500; border-radius: 0; background: #061c33; color: #ffe500; box-shadow: 0 14px 34px rgba(0,0,0,.24); }
+.benefit-banner .button:hover { background: #ffe500; color: #071a30; border-color: #ffe500; box-shadow: 0 18px 40px rgba(255,229,0,.2); }
 
 .product { background: transparent; }
 .product.section { padding-bottom: 0; }
