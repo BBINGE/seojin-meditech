@@ -365,8 +365,14 @@ main > section[id] { scroll-margin-top: 68px; }
 .product-copy .button { align-self: flex-start; }
 .product-disclaimer { margin: 16px 4px 0; color: #718293; font-size: 12px; line-height: 1.6; }
 
-.compare { padding-top: 84px; padding-bottom: 92px; background: #fff; }
-.compare .section-topline { margin-bottom: 38px; }
+.compare {
+  width: auto;
+  max-width: none;
+  padding: 84px max(24px,calc((100vw - var(--max)) / 2)) 92px;
+  background: linear-gradient(180deg,#f4f8fb 0%,#eef4f8 100%);
+}
+.compare .section-topline { justify-content: flex-start; align-items: center; gap: 16px; margin-bottom: 34px; }
+.compare .section-topline span { padding-left: 16px; border-left: 1px solid #c9d7e1; }
 .compare .section-heading { max-width: 1080px; margin-bottom: 32px; }
 .compare .section-heading h2 { margin-top: 13px; font-size: clamp(35px,3.45vw,51px); line-height: 1.1; }
 .comparison-table { overflow-x: auto; border-radius: 9px; box-shadow: 0 15px 38px rgba(7,26,48,.08); }
