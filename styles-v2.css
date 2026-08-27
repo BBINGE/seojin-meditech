@@ -364,11 +364,15 @@ main > section[id] { scroll-margin-top: 68px; }
 .benefit-copy li > span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: var(--blue); color: #fff; font-size: 13px; font-weight: 900; }
 .benefit-copy strong { font-size: 17px; }
 .benefit-copy li p { margin: 5px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
-.benefit-banner { display: flex; flex-direction: column; justify-content: center; padding: 48px; background: linear-gradient(145deg,#0e97d5,#086ea7); color: #fff; box-shadow: 0 22px 50px rgba(7,141,206,.2); }
-.benefit-banner > span { align-self: flex-start; padding: 8px 11px; background: rgba(255,255,255,.16); font-size: 13px; font-weight: 900; letter-spacing: .08em; }
+.benefit-banner { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: center; min-height: 560px; overflow: hidden; padding: 48px; border: 1px solid rgba(124,206,239,.2); background: #071c32; color: #fff; box-shadow: 0 24px 58px rgba(5,31,55,.22); }
+.benefit-banner::before { content: ""; position: absolute; z-index: -2; inset: 0; background: url("assets/gangnam-orthopedic-clinic-v1.webp") center / cover no-repeat; opacity: .54; filter: saturate(.82); transform: scale(1.035); transition: transform 1s cubic-bezier(.2,.75,.25,1), filter .6s ease; }
+.benefit-banner::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(144deg,transparent 0 46%,rgba(9,83,126,.42) 46% 64%,transparent 64%),linear-gradient(28deg,rgba(2,15,34,.48) 0 30%,transparent 30% 68%,rgba(3,29,58,.62) 68% 100%),linear-gradient(108deg,rgba(2,14,32,.96) 0%,rgba(3,30,57,.9) 54%,rgba(4,48,80,.76) 100%); }
+.benefit-banner:hover::before { transform: scale(1.07); filter: saturate(1.08); }
+.benefit-banner > * { position: relative; z-index: 1; }
+.benefit-banner > span { align-self: flex-start; padding: 8px 11px; border: 1px solid rgba(132,218,255,.3); background: rgba(16,108,154,.38); font-size: 13px; font-weight: 900; letter-spacing: .08em; backdrop-filter: blur(8px); }
 .benefit-banner h3 { margin: 23px 0 15px; font-size: clamp(27px,2.5vw,38px); line-height: 1.4; letter-spacing: -.045em; }
-.benefit-banner > p { margin: 0; color: #d8f2ff; font-size: 14px; line-height: 1.75; }
-.benefit-banner > div { margin: 50px 0 22px; padding: 16px; background: rgba(0,33,62,.25); }
+.benefit-banner > p { margin: 0; color: #dcecf6; font-size: 14px; line-height: 1.75; text-shadow: 0 2px 12px rgba(0,0,0,.2); }
+.benefit-banner > div { margin: 50px 0 22px; padding: 16px; border-left: 3px solid #35bdea; background: rgba(3,24,44,.56); box-shadow: 0 12px 30px rgba(0,0,0,.12); backdrop-filter: blur(9px); }
 .benefit-banner strong, .benefit-banner small { display: block; }
 .benefit-banner small { margin-top: 5px; color: #c7eafb; }
 .benefit-banner .button { align-self: flex-start; }
