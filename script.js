@@ -5,6 +5,7 @@ function updateProgress() {
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const progress = max > 0 ? (window.scrollY / max) * 100 : 0;
   progressBar.style.width = `${progress}%`;
+  document.body.classList.toggle('is-scrolled', window.scrollY > 24);
 }
 
 window.addEventListener('scroll', updateProgress, { passive: true });
@@ -18,9 +19,25 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach((element) => {
+document.querySelectorAll('.pain-grid, .profit-cards, .region-list, .benefit-copy ul').forEach((group) => {
+  [...group.children].forEach((element, index) => {
+    element.classList.add('reveal-item');
+    element.style.setProperty('--reveal-delay', `${index * 90}ms`);
+  });
+});
+
+document.querySelectorAll('.reveal, .reveal-item').forEach((element) => {
   if (reduceMotion) element.classList.add('visible');
   else revealObserver.observe(element);
+});
+
+document.querySelectorAll('.pain-grid article, .profit-cards article, .network-card, .benefit-banner').forEach((card) => {
+  card.classList.add('interactive-card');
+  card.addEventListener('pointermove', (event) => {
+    const bounds = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${event.clientX - bounds.left}px`);
+    card.style.setProperty('--my', `${event.clientY - bounds.top}px`);
+  });
 });
 
 document.querySelectorAll('.quote-link').forEach((link) => {
