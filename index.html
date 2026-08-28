@@ -9,7 +9,7 @@
   <title>신장분사치료기 방문 데모 | 서진메디텍</title>
   <link rel="icon" href="assets/logo-mark.png" type="image/png">
   <link rel="preload" href="assets/hero-installation-v1.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles-v2.css?v=20260828-01">
+  <link rel="stylesheet" href="styles-v2.css?v=20260828-02">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -17,7 +17,7 @@
     "name": "서진메디텍",
     "alternateName": "SJ Meditec",
     "telephone": "+82-2-841-7525",
-    "email": "zeuswave@naver.com",
+    "email": "autocycle@hanmail.net",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "가산동 345-29, 대륭테크노타운19차 6층 608호",
@@ -42,7 +42,7 @@
       <a href="#profit">운영 구조</a>
     </nav>
     <a class="top-phone" href="tel:028417525">02-841-7525</a>
-    <a class="top-cta attention-cta quote-link" href="#quote">무료 방문 데모 <span>→</span></a>
+    <a class="top-cta attention-cta" href="tel:028417525">무료 방문 데모 신청하기 <span>→</span></a>
   </header>
 
   <div class="audience-notice" role="note">
@@ -89,20 +89,20 @@
           <div class="form-grid">
             <label><span>병원명</span><input name="clinic" autocomplete="organization" placeholder="예: OO정형외과의원" required></label>
             <label><span>원장님 성함</span><input name="director" autocomplete="name" placeholder="예: 홍길동 원장" required></label>
-            <label><span>진료과목</span><select name="department" required><option value="">선택해주세요</option><option>정형외과</option><option>마취통증의학과</option><option>재활의학과</option><option>신경외과</option><option>한의원</option><option>기타</option></select></label>
-            <label><span>연락처</span><input name="phone" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></label>
+            <label><span>희망 지역</span><select name="region" required><option value="">지역 선택</option><option>서울·경기·인천</option><option>대구·경북·강원</option><option>부산·울산·경남</option><option>대전·세종·충남·충북</option><option>광주·전남·전북·제주도</option><option>기타 지역</option></select></label>
+            <label><span>진료과목</span><select name="department" required><option value="">진료과목 선택</option><option>정형외과</option><option>마취통증의학과</option><option>재활의학과</option><option>신경외과</option><option>한의원</option><option>기타</option></select></label>
           </div>
           <div class="consent-panel" id="hero-consent-detail">
             <dl>
               <dt>수집·이용 목적</dt><dd>방문 데모, 제품·견적 상담, 일정 및 담당자 안내</dd>
-              <dt>수집 항목</dt><dd>병원명, 담당자 성명, 진료과목, 연락처</dd>
+              <dt>수집 항목</dt><dd>병원명, 담당자 성명, 희망 지역, 진료과목</dd>
               <dt>보유 기간</dt><dd>상담 종료일 또는 마지막 연락일 중 늦은 날부터 6개월</dd>
             </dl>
             <p class="consent-refusal">동의를 거부할 수 있으나, 필수 정보이므로 거부 시 방문 데모·상담 신청이 제한됩니다.</p>
             <label class="consent"><input type="checkbox" name="consent" required aria-describedby="hero-consent-detail"><span>[필수] 개인정보 수집·이용에 동의합니다. <a href="privacy.html#collection-consent" target="_blank" rel="noopener noreferrer">전체 내용 보기</a></span></label>
           </div>
-          <button class="attention-cta" type="submit">무료 방문 데모 및 자료 신청하기 <span>→</span></button>
-          <p class="form-note">입력 내용은 사이트 서버에 저장·자동 전송되지 않습니다. 신청 버튼을 누르면 기기 클립보드에 복사되고 카카오톡으로 이동하며, 상담창에서 직접 전송할 때 서진메디텍이 수신합니다.</p>
+          <button class="attention-cta" type="submit">무료 방문 데모 신청하기 <span>→</span></button>
+          <p class="form-note">입력 내용은 사이트 서버에 저장·자동 전송되지 않습니다. 신청 버튼을 누르면 서진메디텍 대표 전화로 연결됩니다.</p>
           <div class="form-message" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -120,7 +120,7 @@
           <h2>전국 어디서나<br><em>원내 방문 시연을 상담하세요.</em></h2>
           <p>병원 위치와 희망 일정을 남겨주시면 방문 가능 여부를 확인해 가장 빠른 상담 일정을 안내합니다.</p>
           <div class="region-tabs" aria-label="상담 가능 지역">
-            <span class="active">서울·경기·인천</span><span>대구·경북</span><span>부산·울산·경남</span><span>대전·세종·충남·충북</span><span>광주·전남·전북</span>
+            <span class="active">서울·경기·인천</span><span>대구·경북·강원</span><span>부산·울산·경남</span><span>대전·세종·충남·충북</span><span>광주·전남·전북·제주도</span>
           </div>
           <div class="region-capability">
             <div><strong>전국 5개 권역 운영</strong><small>권역별 담당자가 방문 가능 일정을 안내합니다.</small></div>
@@ -128,10 +128,10 @@
           </div>
           <div class="region-list">
             <article class="featured"><div><b>MAIN SERVICE AREA</b><strong>서울·경기·인천</strong><small>수도권 메인 운영 권역 · 담당자 연결</small></div><span>수도권 메인 권역</span></article>
-            <article><strong>대구·경북</strong><small>방문 일정 확인 후 담당자 연결</small></article>
+            <article><strong>대구·경북·강원</strong><small>방문 일정 확인 후 담당자 연결</small></article>
             <article><strong>부산·울산·경남</strong><small>방문 일정 확인 후 담당자 연결</small></article>
             <article><strong>대전·세종·충남·충북</strong><small>방문 일정 확인 후 담당자 연결</small></article>
-            <article><strong>광주·전남·전북</strong><small>방문 일정 확인 후 담당자 연결</small></article>
+            <article><strong>광주·전남·전북·제주도</strong><small>방문 일정 확인 후 담당자 연결</small></article>
           </div>
           <div class="service-map reveal">
             <div class="service-map-copy">
@@ -185,14 +185,13 @@
           <div class="network-form-grid">
             <label><span>병원명</span><input name="clinic" autocomplete="organization" placeholder="OO정형외과의원" required></label>
             <label><span>원장님 성함</span><input name="director" autocomplete="name" placeholder="홍길동 원장" required></label>
-            <label><span>희망 지역</span><select name="region" required><option value="">지역 선택</option><option>서울·경기·인천</option><option>대구·경북</option><option>부산·울산·경남</option><option>대전·세종·충남·충북</option><option>광주·전남·전북</option><option>기타 지역</option></select></label>
+            <label><span>희망 지역</span><select name="region" required><option value="">지역 선택</option><option>서울·경기·인천</option><option>대구·경북·강원</option><option>부산·울산·경남</option><option>대전·세종·충남·충북</option><option>광주·전남·전북·제주도</option><option>기타 지역</option></select></label>
             <label><span>진료과목</span><select name="department" required><option value="">진료과목 선택</option><option>정형외과</option><option>마취통증의학과</option><option>재활의학과</option><option>신경외과</option><option>한의원</option><option>기타</option></select></label>
-            <label class="network-phone"><span>연락처</span><input name="phone" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required></label>
           </div>
           <div class="consent-panel" id="region-consent-detail">
             <dl>
               <dt>수집·이용 목적</dt><dd>방문 데모, 제품·견적 상담, 지역별 일정 및 담당자 안내</dd>
-              <dt>수집 항목</dt><dd>병원명, 담당자 성명, 희망 지역, 진료과목, 연락처</dd>
+              <dt>수집 항목</dt><dd>병원명, 담당자 성명, 희망 지역, 진료과목</dd>
               <dt>보유 기간</dt><dd>상담 종료일 또는 마지막 연락일 중 늦은 날부터 6개월</dd>
             </dl>
             <p class="consent-refusal">동의를 거부할 수 있으나, 필수 정보이므로 거부 시 방문 데모·상담 신청이 제한됩니다.</p>
@@ -349,9 +348,10 @@
             <div><dt>대표</dt><dd>정규근</dd></div>
             <div><dt>사업자등록번호</dt><dd>108-14-35381</dd></div>
             <div><dt>통신판매업 신고번호</dt><dd>제2022-서울금천-1919호</dd></div>
+            <div><dt>의료기기판매업 신고번호</dt><dd>제2051호</dd></div>
             <div class="company-address"><dt>주소</dt><dd>서울특별시 금천구 가산동 345-29<br>대륭테크노타운19차 6층 608호</dd></div>
             <div><dt>전화</dt><dd><a href="tel:028417525">02-841-7525</a></dd></div>
-            <div><dt>이메일</dt><dd><a href="mailto:zeuswave@naver.com">zeuswave@naver.com</a></dd></div>
+            <div><dt>이메일</dt><dd><a href="mailto:autocycle@hanmail.net">autocycle@hanmail.net</a></dd></div>
           </dl>
         </div>
       </div>
@@ -373,6 +373,6 @@
     <a class="mobile-quote attention-cta quote-link" href="#quote"><span>30초 간편 신청</span><b>무료 데모 신청하기 →</b></a>
   </nav>
 
-  <script src="script.js?v=20260827-17"></script>
+  <script src="script.js?v=20260828-01"></script>
 </body>
 </html>

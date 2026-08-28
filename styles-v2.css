@@ -390,7 +390,6 @@ main > section[id] { scroll-margin-top: 68px; }
 .network-form label > span { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 800; }
 .network-form input, .network-form select { width: 100%; height: 50px; padding: 0 13px; border: 1px solid #cbd7e0; border-radius: 8px; background: #f8fafc; color: var(--ink); }
 .network-form input:focus, .network-form select:focus { outline: 2px solid rgba(7,141,206,.18); border-color: var(--blue); }
-.network-phone { grid-column: 1 / -1; }
 .network-form .consent-panel { margin: 16px 0; }
 .network-form .consent { margin: 0; }
 .network-form .consent input { flex: 0 0 auto; width: 21px; height: 21px; padding: 0; }
@@ -685,7 +684,6 @@ footer::before { content: ""; position: absolute; inset: 0; background: radial-g
   .network-card { padding: 25px 20px; }
   .network-card dl div { grid-template-columns: 1fr; gap: 5px; }
   .network-form-grid { grid-template-columns: 1fr; }
-  .network-phone { grid-column: auto; }
   .benefit-banner { padding: 32px 23px; }
   .benefit-banner > div { margin-top: 35px; }
   .section-heading h2, .benefit h2, .product h2, .profit h2, .final-cta h2 { font-size: 34px; }

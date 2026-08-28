@@ -47,7 +47,7 @@ document.querySelectorAll('.quote-link').forEach((link) => {
 });
 
 const kakaoChatUrl = 'https://pf.kakao.com/_xojxkbxj/chat';
-const privacyConsentVersion = '2026.08.27';
+const privacyConsentVersion = '2026.08.28';
 
 function getKoreanTimestamp() {
   return new Intl.DateTimeFormat('ko-KR', {
@@ -88,15 +88,14 @@ document.querySelectorAll('.lead-form').forEach((form) => {
 
     if (!form.checkValidity()) {
       form.reportValidity();
-      showMessage(message, '병원명, 원장님 성함, 진료과목, 연락처와 개인정보 동의를 확인해주세요.', true);
+      showMessage(message, '병원명, 원장님 성함, 희망 지역, 진료과목과 개인정보 동의를 확인해주세요.', true);
       return;
     }
 
     const data = new FormData(form);
-    const digits = String(data.get('phone') ?? '').replace(/\D/g, '');
-    if (digits.length < 9 || digits.length > 11) {
-      showMessage(message, '연락 가능한 전화번호를 확인해주세요.', true);
-      form.elements.phone.focus();
+    if (form.id === 'quote') {
+      showMessage(message, '서진메디텍 대표 전화로 연결합니다.');
+      window.setTimeout(() => { window.location.href = 'tel:028417525'; }, 350);
       return;
     }
 
@@ -106,7 +105,6 @@ document.querySelectorAll('.lead-form').forEach((form) => {
       `원장님 성함: ${data.get('director')}`,
       data.get('region') ? `희망 지역: ${data.get('region')}` : '',
       `진료과목: ${data.get('department')}`,
-      `연락처: ${data.get('phone')}`,
       `개인정보 수집·이용 동의: 동의함 (방침 v${privacyConsentVersion})`,
       `동의 일시: ${getKoreanTimestamp()}`,
       '방문 가능 일정과 제품 자료를 안내해주세요.'
@@ -114,7 +112,7 @@ document.querySelectorAll('.lead-form').forEach((form) => {
 
     const copied = await copyText(body);
     if (!copied) {
-      showMessage(message, '상담 내용을 자동으로 복사하지 못했습니다. 카카오톡 상담 버튼으로 이동해 병원명과 연락처를 직접 보내주세요.', true);
+      showMessage(message, '상담 내용을 자동으로 복사하지 못했습니다. 카카오톡 상담 버튼으로 이동해 병원명과 희망 지역을 직접 보내주세요.', true);
       return;
     }
 
