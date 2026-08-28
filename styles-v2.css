@@ -664,7 +664,6 @@ footer::before { content: ""; position: absolute; inset: 0; background: radial-g
 }
 
 @media (max-width: 520px) {
-  .map-node.east-node b { right: calc(100% + 7px); left: auto; }
   .top-cta span { display: none; }
   .hero-actions { display: grid; }
   .hero-actions .button { width: 100%; }
